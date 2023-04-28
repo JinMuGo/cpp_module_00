@@ -14,13 +14,12 @@
 #include "Contact.hpp"
 
 class PhoneBook {
-  private:
-	Contact	contactArr[8];
-	int		curIdx;
+   private:
+    Contact contactArr[8];
+    int curIdx;
 
-  public:
-	PhoneBook();
-	~PhoneBook();
-	void addContact();
-	void searchContact();
+   public:
+    PhoneBook();
+    void addContact();
+    void searchContact();
 };

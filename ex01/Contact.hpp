@@ -14,18 +14,17 @@
 #include "main.h"
 
 class Contact {
-  private:
-	std::string info[5];
-	bool		filled;
+   private:
+    std::string info[5];
+    bool filled;
 
-  public:
-	Contact();
-	~Contact();
-	void saveColumn(int info);
-	void saveInfo(int idx);
-	void prtInfos(void);
-	void prtDetailInfos(void);
-	std::string formatStr(std::string str);
-	static const std::string infoArr[5];
-	bool getFilled();
+   public:
+    Contact();
+    void saveColumn(int info);
+    void saveInfo(int idx);
+    void prtInfos(void);
+    void prtDetailInfos(void);
+    std::string formatStr(std::string str);
+    static const std::string infoArr[5];
+    bool getFilled();
 };
