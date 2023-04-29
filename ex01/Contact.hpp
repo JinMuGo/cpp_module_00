@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:26:25 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/23 16:05:53 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/29 11:22:26 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Contact {
 
    public:
     Contact();
+    ~Contact();
     void saveColumn(int info);
     void saveInfo(int idx);
     void prtInfos(void);
