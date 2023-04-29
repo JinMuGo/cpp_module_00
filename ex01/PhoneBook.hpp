@@ -6,11 +6,13 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:26:36 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/29 11:22:08 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/29 16:52:12 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 #include "Contact.hpp"
 
 class PhoneBook {
@@ -24,3 +26,5 @@ class PhoneBook {
 	void addContact();
 	void searchContact();
 };
+
+#endif

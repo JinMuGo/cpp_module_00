@@ -6,11 +6,13 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:26:25 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/29 11:22:26 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/29 16:51:54 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 #include "main.h"
 
 class Contact {
@@ -29,3 +31,5 @@ class Contact {
     static const std::string infoArr[5];
     bool getFilled();
 };
+
+#endif
