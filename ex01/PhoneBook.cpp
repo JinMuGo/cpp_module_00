@@ -6,16 +6,14 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:14 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/29 11:22:19 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/30 18:51:58 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "utils.h"
 
-PhoneBook::PhoneBook() {
-	curIdx = 0;
-}
+PhoneBook::PhoneBook() : curIdx(0) {}
 
 PhoneBook::~PhoneBook() {}
 
@@ -30,7 +28,7 @@ void PhoneBook::searchContact() {
 	std::string input;
 	int idx = -1;
 
-	// prt Column
+	// PRT COLUMN
 	std::cout << "---------------------------------------------\n|";
 	for (int i = INDEX; i <= NICKNAME; i++) {
 		searchPrt(Contact::infoArr[i]);
@@ -39,7 +37,7 @@ void PhoneBook::searchContact() {
 	}
 	std::cout << "---------------------------------------------\n";
 
-	// prt all Infos
+	// PRT ALL INFOS
 	while (++idx < 8) {
 		if (!contactArr[idx].getFilled())
 			break;

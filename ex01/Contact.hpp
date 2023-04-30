@@ -6,30 +6,30 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:26:25 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/29 16:51:54 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/30 18:48:03 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef CONTACT_HPP
-# define CONTACT_HPP
+#define CONTACT_HPP
 #include "main.h"
 
 class Contact {
    private:
-    std::string info[5];
-    bool filled;
+	std::string info[5];
+	bool filled;
 
    public:
-    Contact();
-    ~Contact();
-    void saveColumn(int info);
-    void saveInfo(int idx);
-    void prtInfos(void);
-    void prtDetailInfos(void);
-    std::string formatStr(std::string str);
-    static const std::string infoArr[5];
-    bool getFilled();
+	Contact();
+	~Contact();
+	void saveColumn(int info);
+	void saveInfo(int idx);
+	void prtInfos(void);
+	void prtDetailInfos(void);
+	std::string formatStr(std::string str);
+	static const std::string infoArr[5];
+	bool getFilled();
 };
 
 #endif
