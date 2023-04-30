@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 20:43:21 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 18:46:02 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/30 20:49:03 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <string>
 #include <cstdio>
 #include <sstream>
+#include <regex>
 
 # define WIDTH 10
 
@@ -35,6 +36,7 @@ enum e_info {
 	FIRST_NAME,
 	LAST_NAME,
 	NICKNAME,
+	PHONE_NUMBER,
 	SECRET
 };
 

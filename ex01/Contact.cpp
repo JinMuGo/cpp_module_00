@@ -6,15 +6,15 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:13 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/29 11:22:41 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/30 21:00:03 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include "utils.h"
 
-const std::string Contact::infoArr[5] = {"INDEX", "FIRST_NAME", "LAST_NAME",
-										 "NICKNAME", "SECRET"};
+const std::string Contact::infoArr[6] = {
+	"INDEX", "FIRST_NAME", "LAST_NAME", "NICKNAME", "PHONE_NUMBER", "SECRET"};
 
 Contact::Contact() {
 	for (int i = INDEX; i <= SECRET; i++)
@@ -65,6 +65,12 @@ void Contact::saveColumn(int _info) {
 		else if (input == "")
 			std::cout << "fill out input"
 					  << "\n";
+		else if (column == infoArr[PHONE_NUMBER] && !isPhoneNumber(input))
+		{
+			std::cout << "PHONE_NUMBER IS MUST BE PHONE NUMBER FORMAT \n";
+			std::cout << "ex) XXX-XXXX-XXXX or enum of number\n";
+			continue ;
+		}
 		if (!input.empty())
 			break;
 	}

@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:50:05 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 18:51:34 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/30 20:59:13 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main(void) {
 	std::string input;
 
 	while (command) {
+		std::cout << "you can choose in (ADD,SEARCH,EXIT)\n";
 		std::cout << "[PhoneBook]: ";
 		std::getline(std::cin, input);
 		if (std::cin.eof()) {
@@ -33,10 +34,12 @@ int main(void) {
 			case SEARCH:
 				phoneBook.searchContact();
 				break;
+			case EXIT:
+				std::cout << "byebye :)" << std::endl;
+				return (0);
 			default:
 				break;
 		}
 	}
-	std::cout << "byebye :)" << std::endl;
 	return (0);
 }

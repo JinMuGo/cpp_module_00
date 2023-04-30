@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:14 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 18:51:58 by jgo              ###   ########.fr       */
+/*   Updated: 2023/04/30 20:28:37 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ PhoneBook::PhoneBook() : curIdx(0) {}
 PhoneBook::~PhoneBook() {}
 
 void PhoneBook::addContact() {
-	if (curIdx == 7)
+	if (curIdx == 8)
 		curIdx = 0;
 	contactArr[curIdx].saveInfo(curIdx);
 	curIdx++;
@@ -42,6 +42,12 @@ void PhoneBook::searchContact() {
 		if (!contactArr[idx].getFilled())
 			break;
 		contactArr[idx].prtInfos();
+	}
+
+	if (idx == 0)
+	{
+		std::cout << "PhoneBook is Empty fillOut the first one" << std::endl;
+		return ;
 	}
 
 	// CHOOSE INDEX
