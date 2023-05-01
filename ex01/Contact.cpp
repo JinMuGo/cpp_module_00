@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:13 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 21:00:03 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/01 12:45:26 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,9 @@ void Contact::saveColumn(int _info) {
 		else if (input == "")
 			std::cout << "fill out input"
 					  << "\n";
-		else if (column == infoArr[PHONE_NUMBER] && !isPhoneNumber(input))
-		{
-			std::cout << "PHONE_NUMBER IS MUST BE PHONE NUMBER FORMAT \n";
-			std::cout << "ex) XXX-XXXX-XXXX or enum of number\n";
-			continue ;
+		else if (column == infoArr[PHONE_NUMBER] && !isPhoneNumber(input)) {
+			std::cout << "PHONE_NUMBER IS MUST BE NUMBER OF LIST \n";
+			continue;
 		}
 		if (!input.empty())
 			break;

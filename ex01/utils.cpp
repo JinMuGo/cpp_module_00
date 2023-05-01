@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:17:20 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 20:56:32 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/01 12:27:21 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,14 @@ void searchPrt(std::string str) {
 
 void detailPrt(std::string key, std::string val) {
 
-	std::cout << "     " << std::setw(WIDTH) << std::left << key << ": ";
+	std::cout << "     " << std::setw(WIDTH + 5) << std::left << key << ": ";
 	std::cout << val << "\n";
 }
 
 bool isPhoneNumber(const std::string& str) {
-	std::regex reg("[[:digit:]]{3}-[[:digit:]]{4}-[[:digit:]]{4}");
 	std::string::const_iterator it = str.begin();
 
-	if (std::regex_match(str, reg))
-		return (true);
 	while (it != str.end() && std::isdigit(*it))
 		++it;
-	return ((!str.empty() && it == str.end()));
+	return ((str.length() == 11 && !str.empty() && it == str.end()));
 }

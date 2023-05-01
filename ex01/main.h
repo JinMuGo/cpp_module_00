@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 20:43:21 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 20:49:03 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/01 12:24:59 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 #include <string>
 #include <cstdio>
 #include <sstream>
-#include <regex>
 
 # define WIDTH 10
 
