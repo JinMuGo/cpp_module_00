@@ -6,11 +6,10 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:26:25 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 20:31:56 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/01 13:07:22 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 #include "main.h"
