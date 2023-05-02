@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 21:50:05 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/30 20:59:13 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/02 14:12:34 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "utils.h"
 
 int main(void) {
-	t_command command = DEFAULT;
+	t_command command = kDefault;
 	PhoneBook phoneBook;
 	std::string input;
 
@@ -28,13 +28,13 @@ int main(void) {
 		}
 		command = convertStringToCmd(input);
 		switch (command) {
-			case ADD:
+			case kAdd:
 				phoneBook.addContact();
 				break;
-			case SEARCH:
+			case kSearch:
 				phoneBook.searchContact();
 				break;
-			case EXIT:
+			case kExit:
 				std::cout << "byebye :)" << std::endl;
 				return (0);
 			default:

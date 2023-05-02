@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 20:43:21 by jgo               #+#    #+#             */
-/*   Updated: 2023/05/01 15:35:53 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/02 14:55:11 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,20 @@
 # define WIDTH 10
 
 enum e_command {
-	EXIT,
-	NONE,
-	DEFAULT,
-	ADD,
-	SEARCH,
+	kExit,
+	kNone,
+	kDefault,
+	kAdd,
+	kSearch,
 };
 
 enum e_info {
-	INDEX,
-	FIRST_NAME,
-	LAST_NAME,
-	NICKNAME,
-	PHONE_NUMBER,
-	SECRET
+	kIndex,
+	kFirstName,
+	kLastName,
+	kNickName,
+	kPhoneNumber,
+	kSecret
 };
 
 typedef enum e_command t_command;

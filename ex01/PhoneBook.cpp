@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 19:21:14 by jgo               #+#    #+#             */
-/*   Updated: 2023/05/01 12:44:26 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/02 14:58:45 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void PhoneBook::searchContact() {
 
 	// PRT COLUMN
 	std::cout << "---------------------------------------------\n|";
-	for (int i = INDEX; i <= NICKNAME; i++) {
+	for (int i = kIndex; i <= kNickName; i++) {
 		searchPrt(Contact::infoArr[i]);
-		if (i == NICKNAME)
+		if (i == kNickName)
 			std::cout << "\n";
 	}
 	std::cout << "---------------------------------------------\n";
@@ -49,8 +49,8 @@ void PhoneBook::searchContact() {
 		return;
 	}
 
-	// CHOOSE INDEX
-	std::cout << "CHOOSE SINGLE INDEX\n";
+	// CHOOSE kIndex
+	std::cout << "CHOOSE SINGLE kIndex\n";
 	while (true) {
 		std::cout << "[SEARCH] :";
 		getline(std::cin, input);

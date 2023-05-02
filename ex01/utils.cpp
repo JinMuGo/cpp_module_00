@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:17:20 by jgo               #+#    #+#             */
-/*   Updated: 2023/05/01 12:27:21 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/02 14:59:15 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 t_command convertStringToCmd(std::string input) {
 	if (input == "EXIT")
-		return (EXIT);
+		return (kExit);
 	else if (input == "ADD")
-		return (ADD);
+		return (kAdd);
 	else if (input == "SEARCH")
-		return (SEARCH);
+		return (kSearch);
 	else
-		return (NONE);
+		return (kNone);
 }
 
 void handleEOF() {
