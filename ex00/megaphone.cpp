@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:21:18 by jgo               #+#    #+#             */
-/*   Updated: 2023/05/03 11:28:02 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/03 13:40:49 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ int main(int ac, char** av) {
 	else {
 		for (int i = 1; i < ac; ++i) {
 			str = av[i];
-			for (std::string::iterator it = str.begin(); it != str.end();
-				 ++it) {
+			for (std::string::iterator it = str.begin(); it != str.end(); ++it)
 				*it = std::toupper(*it);
-			}
 			std::cout << str;
 		}
 	}
