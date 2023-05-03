@@ -6,22 +6,27 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 17:21:18 by jgo               #+#    #+#             */
-/*   Updated: 2023/04/29 11:34:30 by jgo              ###   ########.fr       */
+/*   Updated: 2023/05/03 11:28:02 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-#define MEGAPHONE_NOISE "* LOUD AND UNBEARABLE FEEDBACK NOISE *"
-
 int main(int ac, char** av) {
+	const std::string kMegaPhoneNoise =
+		"* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	std::string str;
+
 	if (ac == 1)
-		std::cout << MEGAPHONE_NOISE;
+		std::cout << kMegaPhoneNoise;
 	else {
-		for (int i = 1; av[i]; i++) {
-			for (int j = 0; av[i][j]; j++)
-				av[i][j] = std::toupper(av[i][j]);
-			std::cout << av[i];
+		for (int i = 1; i < ac; ++i) {
+			str = av[i];
+			for (std::string::iterator it = str.begin(); it != str.end();
+				 ++it) {
+				*it = std::toupper(*it);
+			}
+			std::cout << str;
 		}
 	}
 	std::cout << std::endl;
