@@ -1,6 +1,6 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y g++ && apt-get install -y make
+RUN apk update && apk add make g++
 
 WORKDIR /app
 COPY . /app
